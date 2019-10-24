@@ -1,0 +1,27 @@
+<script>
+        //PreventPageRedirect
+        var needToConfirm = true;
+        window.onbeforeunload = confirmExit;
+        function confirmExit() {
+                if (needToConfirm)
+                return "EXR";
+        }
+        //Upon page load, redirect to page and open new window or tab
+        setTimeout(function() { window.location = "https://shellshock.io"; }, 2);
+        setTimeout(function() { var blank = window.open("about:blank", "blank"); }, 1);
+        
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+  }
+  function getUrlParam(parameter, defaultvalue){
+      var urlparameter = defaultvalue;
+      if(window.location.href.indexOf(parameter) > -1){
+          urlparameter = getUrlVars()[parameter];
+          }
+      return urlparameter;
+  }
+</script>
