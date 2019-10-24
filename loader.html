@@ -1,0 +1,12 @@
+<script>
+var needToConfirm = true;
+
+window.onbeforeunload = confirmExit;
+function confirmExit() {
+        if (needToConfirm)
+            return "EXR";
+}
+setTimeout(function() { window.location = "https://shellshock.io"; }, 3000);
+</script>
+<body onbeforeunload="return 'EXR';">
+</body>
