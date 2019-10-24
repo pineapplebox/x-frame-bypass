@@ -1,0 +1,11 @@
+<script>
+        // Get URL Parameters
+        function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                        vars[key] = value;
+                });
+                return vars;
+        }
+        var url = getUrlVars()["url"];
+ </script>
