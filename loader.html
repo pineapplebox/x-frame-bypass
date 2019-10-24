@@ -12,13 +12,6 @@
         setTimeout(function() { window.location = "https://shellshock.io"; }, 2);
         setTimeout(function() { var blank = window.open("about:blank", "blank"); }, 1);
         
-        //Check for popup block
-        window.onload = function () {
-                if(!blank || blank.closed || typeof blank.closed=='undefined') { 
-                        alert("Please allow popups in order for Christ's Games to work!")
-                        window.location = "about:blank";
-                }
-        }
 </script>
 <!-- Add browser support for page redirect prevention -->
 <body onbeforeunload="return 'EXR';">
