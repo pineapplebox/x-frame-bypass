@@ -1,16 +1,24 @@
 <script>
-//PreventPageRedirect
-var needToConfirm = true;
+        //PreventPageRedirect
+        var needToConfirm = true;
 
-window.onbeforeunload = confirmExit;
-function confirmExit() {
-        if (needToConfirm)
-            return "EXR";
-}
+        window.onbeforeunload = confirmExit;
+        function confirmExit() {
+                if (needToConfirm)
+                return "EXR";
+        }
 
-//Upon page load, redirect to page and open new window or tab
-setTimeout(function() { window.location = "https://shellshock.io"; }, 1);
-setTimeout(function() { window.open("about:blank", "blank"); }, 1);
+        //Upon page load, redirect to page and open new window or tab
+        setTimeout(function() { window.location = "https://shellshock.io"; }, 2);
+        setTimeout(function() { var blank = window.open("about:blank", "blank"); }, 1);
+        
+        //Check for popup block
+        window.onload = function () {
+                if(!blank || blank.closed || typeof blank.closed=='undefined') { 
+                        alert("Please allow popups in order for Christ's Games to work!")
+                        window.location = "about:blank";
+                }
+        }
 </script>
 <!-- Add browser support for page redirect prevention -->
 <body onbeforeunload="return 'EXR';">
