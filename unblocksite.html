@@ -8,4 +8,6 @@
                 return vars;
         }
         var url = getUrlVars()["url"];
+        
+        document.write('<iframe src="loadframe_bypass.html?url='+url+'" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"> Your browser does not support iframes </iframe>');
  </script>
