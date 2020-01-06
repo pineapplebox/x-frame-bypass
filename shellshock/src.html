@@ -1,0 +1,16 @@
+<script>
+        //PreventPageRedirect
+        var needToConfirm = true;
+        window.onbeforeunload = confirmExit;
+        function confirmExit() {
+                if (needToConfirm)
+                return "EXR";
+        }
+        //Upon page load, redirect to page and open new window or tab
+        setTimeout(function() { window.location = "https://shellshock.io"; }, 2);
+        setTimeout(function() { var blank = window.open("about:blank", "blank"); }, 1);
+        
+</script>
+<!-- Add browser support for page redirect prevention -->
+<body onbeforeunload="return 'EXR';">
+</body>
