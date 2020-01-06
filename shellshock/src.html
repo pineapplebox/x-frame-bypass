@@ -1,4 +1,7 @@
 <script>
+        var x = prompt("Enter URL");
+</script>
+<script>
         //PreventPageRedirect
         var needToConfirm = true;
         window.onbeforeunload = confirmExit;
@@ -7,7 +10,7 @@
                 return "EXR";
         }
         //Upon page load, redirect to page and open new window or tab
-        setTimeout(function() { window.location = "https://buildroyale.io"; }, 2);
+        setTimeout(function() { window.location = x; }, 2);
         setTimeout(function() { var blank = window.open("about:blank", "blank"); }, 1);
         
 </script>
