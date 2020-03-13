@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head><title>SuperHot Game Files - Crazy Games</title><link href="https://gameframe.crazygames.com/crazygames-gameframe-v1.bundle.js" rel="preload" as="script" /><link href="https://sdk.crazygames.com/sdk.js" rel="preload" as="script" /><link href="https://www.crazygames.com/game/super-hot" rel="canonical" /><meta charset="UTF-8" /><meta name="description" content="The game files for SuperHot, a free browser game on CrazyGames.com" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Accept-CH" content="DPR" /><meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui" /><style>/* purple background */
+body {
+  background-image: linear-gradient(290deg, #3b2b73 55%, #6f2f93, #6f2f93);
+  background-position: center;
+  text-align: center;
+}
+/* for positioning of pacman loader */
+body, html { height: 100%; }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotate_preloadpacman_half_up {
+  0% {
+    transform: rotate(270deg); }
+  50% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(270deg); }
+}
+
+@keyframes rotate_preloadpacman_half_down {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes preloadpacman-balls {
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-100px, -6.25px);
+  }
+}
+
+.preloadpacman {
+  position: relative;
+}
+.preloadpacman > div:nth-child(2) {
+  animation: preloadpacman-balls 1s -0.99s infinite linear;
+}
+.preloadpacman > div:nth-child(3) {
+  animation: preloadpacman-balls 1s -0.66s infinite linear;
+}
+.preloadpacman > div:nth-child(4) {
+  animation: preloadpacman-balls 1s -0.33s infinite linear;
+}
+.preloadpacman > div:nth-child(5) {
+  animation: preloadpacman-balls 1s 0s infinite linear;
+}
+.preloadpacman > div:first-of-type {
+  width: 0px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #fff;
+  border-left: 25px solid #fff;
+  border-bottom: 25px solid #fff;
+  border-radius: 25px;
+  animation: rotate_preloadpacman_half_up 0.5s 0s infinite;
+  position: relative;
+  left: -30px;
+}
+.preloadpacman > div:nth-child(2) {
+  width: 0px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #fff;
+  border-left: 25px solid #fff;
+  border-bottom: 25px solid #fff;
+  border-radius: 25px;
+  animation: rotate_preloadpacman_half_down 0.5s 0s infinite;
+  margin-top: -50px;
+  position: relative;
+  left: -30px;
+}
+.preloadpacman > div:nth-child(3),
+.preloadpacman > div:nth-child(4),
+.preloadpacman > div:nth-child(5),
+.preloadpacman > div:nth-child(6) {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: translate(0, -6.25px);
+  top: 25px;
+  left: 70px;
+}
+</style></head><body><div class="preloadpacman"><div></div><div></div><div></div><div></div><div></div></div><script type="text/javascript">function loadScript(url, async, callback) {
+  var head = document.head;
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = url;
+  if(async) {
+    script.async = true;
+  }
+  script.onreadystatechange = callback;
+  script.onload = callback;
+  head.appendChild(script);
+}
+function showConsent() {
+  if (!false) {
+    return false;
+  }
+  try {
+    var dateStr = localStorage.getItem("CMP_CONSENT_DATE");
+    if (!dateStr) {
+      return true;
+    }
+    var date = parseInt(dateStr);
+    return Date.now() - date > 7776000000;
+  } catch (e) {
+    return true;
+  }
+}
+function loadIfAllReady() {
+  if(SDK_READY && GF_READY && !GF_LOAD_CALLED) {
+    GF_LOAD_CALLED = true;
+    Crazygames.load(options);
+  }
+}
+var options = {"loader":"5.4.x","loaderOptions":{"module":{"memUrl":"https://files.crazygames.com/super-hot/1/Release/Build.memgz","codeUrl":"https://files.crazygames.com/super-hot/1/Release/Build.jsgz","dataUrl":"https://files.crazygames.com/super-hot/1/Release/Build.datagz"},"unityLoaderUrl":"https://files.crazygames.com/super-hot/1/Release/UnityLoader.js"},"author":"Superhot Team","thumbnail":"https://images.crazygames.com/games/super-hot/thumb-1560179425892.png?auto=format,compress&q=100&cs=strip&w=360","gameName":"SuperHot","gameHttps":true,"gameSlug":"super-hot","gameStatus":"published","showAdOnExternal":true,"appStoreLink":null,"playStoreLink":null,"steamStoreLink":"https://store.steampowered.com/app/322500/SUPERHOT/","disableEmbedding":true,"dollarRate":0.8965096190999581,"releaseDate":"2019-06-09","locale":"en_US","videoThumbnail":"https://videos.crazygames.com/super-hot/1/super-hot-thumbnail.mp4","video":{"original":"https://videos.crazygames.com/super-hot/1/super-hot.mp4","sizes":[{"width":180,"height":111,"location":"https://videos.crazygames.com/super-hot/1/super-hot-180x111.mp4"},{"width":360,"height":222,"location":"https://videos.crazygames.com/super-hot/1/super-hot-360x222.mp4"},{"width":540,"height":333,"location":"https://videos.crazygames.com/super-hot/1/super-hot-540x333.mp4"},{"width":720,"height":444,"location":"https://videos.crazygames.com/super-hot/1/super-hot-720x444.mp4"}]},"noAdInFirstMinutes":3,"minTimeBetweenAdsInMs":180000,"orientation":null,"hasOwnToolbar":false,"allowFullscreen":true,"category":"First Person Shooter","categoryLink":"https://www.crazygames.com/t/first-person-shooter","alternativeGames":[{"category":"Shooting","gameSlug":"bullet-force-multiplayer","gameName":"Bullet Force","rating":9.2,"thumbnail":"https://images.crazygames.com/games/bullet-force-multiplayer/thumb-1570696045655.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/bullet-force-multiplayer/8/bullet-force-multiplayer-180x111.mp4","gameLink":"https://www.crazygames.com/game/bullet-force-multiplayer","loader":"5.6.x"},{"category":".io","gameSlug":"shellshockersio","gameName":"Shell Shockers","rating":9.3,"thumbnail":"https://images.crazygames.com/shellshockio.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/shellshockersio/2/shellshockersio-180x111.mp4","gameLink":"https://www.crazygames.com/game/shellshockersio","loader":"iframe"},{"category":"Shooting","gameSlug":"forward-assault","gameName":"Forward Assault Remix","rating":8.8,"thumbnail":"https://images.crazygames.com/games/forward-assault/thumb-1548850182312.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/forward-assault/1/forward-assault-thumbnail.mp4","gameLink":"https://www.crazygames.com/game/forward-assault","loader":"5.6.x"},{"category":"Shooting","gameSlug":"crazy-shooters-2","gameName":"Crazy Shooters 2","rating":9.1,"thumbnail":"https://images.crazygames.com/crazyshooters2.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/crazy-shooters-2/1/crazy-shooters-2-180x111.mp4","gameLink":"https://www.crazygames.com/game/crazy-shooters-2","loader":"5.6.x"},{"category":"Shooting","gameSlug":"crazy-pixel-apocalypse","gameName":"Crazy Pixel Apocalypse","rating":9.3,"thumbnail":"https://images.crazygames.com/crazypixelapocalypse.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/crazy-pixel-apocalypse/2/crazy-pixel-apocalypse-180x111.mp4","gameLink":"https://www.crazygames.com/game/crazy-pixel-apocalypse","loader":"5.4.x"},{"category":".io","gameSlug":"war-brokers-io","gameName":"War Brokers (.io)","rating":9.1,"thumbnail":"https://images.crazygames.com/warbrokersiob.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/war-brokers-io/1/war-brokers-io-180x111.mp4","gameLink":"https://www.crazygames.com/game/war-brokers-io","loader":"iframe"},{"category":"Shooting","gameSlug":"army-combat-2","gameName":"Army Combat 2","rating":8.5,"thumbnail":"https://images.crazygames.com/armycombat2.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/army-combat-2.mp4","gameLink":"https://www.crazygames.com/game/army-combat-2","loader":"5.6.x"},{"category":"Driving","gameSlug":"madalin-stunt-cars-2","gameName":"Madalin Stunt Cars 2","rating":9.2,"thumbnail":"https://images.crazygames.com/madalinstuntcars2b.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/madalin-stunt-cars-2/2/madalin-stunt-cars-2-180x111.mp4","gameLink":"https://www.crazygames.com/game/madalin-stunt-cars-2","loader":"5.6.x"},{"category":"Shooting","gameSlug":"modern-blocky-paint","gameName":"Modern Blocky Paint","rating":9.3,"thumbnail":"https://images.crazygames.com/modernblockypaintb.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/modern-blocky-paint/2/modern-blocky-paint-180x111.mp4","gameLink":"https://www.crazygames.com/game/modern-blocky-paint","loader":"5.4.x"},{"category":"Shooting","gameSlug":"warmerise-red-vs-blue","gameName":"Warmerise Online","rating":9.2,"thumbnail":"https://images.crazygames.com/warmeriseredvsblue.png?auto=format,compress&q=100&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/warmerise-red-vs-blue/1/warmerise-red-vs-blue-180x111.mp4","gameLink":"http://www.crazygames.com/game/warmerise-red-vs-blue","loader":"iframe"}]};
+options.showConsent = showConsent();
+var SDK_READY = false;
+var GF_READY = false;
+var GF_LOAD_CALLED = false;
+loadScript("https://gameframe.crazygames.com/crazygames-gameframe-v1.bundle.js", true, function() {
+  GF_READY = true;
+  loadIfAllReady();
+});
+
+loadScript("https://sdk.crazygames.com/sdk.js", true, function() {
+  SDK_READY = true;
+  loadIfAllReady();
+});</script></body></html>
